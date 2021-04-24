@@ -15,6 +15,10 @@ line disapears and the last printed data line is displayed on the bottom line.
 
 ### Usage
 
+#### Option 1 : copy into UIFlow
+
+The first way to use the Terminal class is to simply copy it in your program into UIFlow.
+
 1.  Copy the content of the `terminal.py` file in UIFlow
 2.  Create an instance of the `Terminal` class
 
@@ -22,6 +26,26 @@ line disapears and the last printed data line is displayed on the bottom line.
     ...
     t = Terminal()
     t.print('temperature log')    
+    ```
+
+#### Option 2 : importing from external modules
+
+There is also the possibility to import the `Terminal` class from a separated
+module. 
+
+1.  Copy the file `terminal.py` onto the M5Stack with UIFlow using the file
+    manager (add file tool). Create a file `terminal.py` in the `apps` folder of
+    the M5Stack and copy the contents of the `terminal.py` file and save (Ctrl + S) in the browser.
+
+2.  Use an `import` statetement in your program
+
+    ```python
+    from terminal import Terminal
+
+    t = Terminal()
+
+    ...
+
     ```
 
 ### Example : logging the data read from the ENV unit
